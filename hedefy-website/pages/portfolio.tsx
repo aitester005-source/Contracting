@@ -13,63 +13,63 @@ export default function Portfolio() {
       title: 'Motor City Community Building',
       location: 'Dubai, UAE',
       description: 'Large-scale residential complex scaffolding project with 50+ workers',
-      image: '/images/portfolio/motor-city.jpg',
+      image: '/newlayout/images/portfolio/motor-city.jpg',
       category: 'residential',
     },
     {
       title: 'Sustainable City 800 Villas',
       location: 'Abu Dhabi, Yas Island',
       description: 'Comprehensive villa construction scaffolding solution for 800 units',
-      image: '/images/portfolio/sustainable-city.jpg',
+      image: '/newlayout/images/portfolio/sustainable-city.jpg',
       category: 'residential',
     },
     {
       title: 'Sharjah Government Building Dome',
       location: 'Sharjah, UAE',
       description: 'Specialized dome scaffolding for government building construction',
-      image: '/images/portfolio/sharjah-government.jpg',
+      image: '/newlayout/images/portfolio/sharjah-government.jpg',
       category: 'commercial',
     },
     {
       title: 'Damac Lagoons 950 Townhouse',
       location: 'Dubai, Marina',
       description: 'Modern townhouse complex scaffolding project',
-      image: '/images/portfolio/damac-lagoons.jpg',
+      image: '/newlayout/images/portfolio/damac-lagoons.jpg',
       category: 'residential',
     },
     {
       title: 'Al Farooq Mosque Minaret',
       location: 'Dubai, UAE',
       description: 'Specialized minaret scaffolding with precision engineering',
-      image: '/images/portfolio/minaret.jpg',
+      image: '/newlayout/images/portfolio/minaret.jpg',
       category: 'religious',
     },
     {
       title: 'ADNOC Storage Tank Project',
       location: 'Abu Dhabi, UAE',
       description: 'Industrial tank scaffolding for oil and gas sector',
-      image: '/images/portfolio/tank.jpg',
+      image: '/newlayout/images/portfolio/tank.jpg',
       category: 'industrial',
     },
     {
       title: 'Dubai Shopping Festival 2024',
       location: 'Dubai, UAE',
       description: 'Temporary event scaffolding for major shopping festival',
-      image: '/images/portfolio/event1.jpg',
+      image: '/newlayout/images/portfolio/event1.jpg',
       category: 'event',
     },
     {
       title: 'Emirates NBD Tower Renovation',
       location: 'Dubai, Business Bay',
       description: 'Complex scaffolding for high-rise building renovation',
-      image: '/images/portfolio/renovation.jpg',
+      image: '/newlayout/images/portfolio/renovation.jpg',
       category: 'commercial',
     },
     {
       title: 'RAK Exhibition Center',
       location: 'Ras Al Khaimah, UAE',
       description: 'Exhibition center construction and setup scaffolding',
-      image: '/images/portfolio/event2.jpg',
+      image: '/newlayout/images/portfolio/event2.jpg',
       category: 'event',
     },
   ];
@@ -179,7 +179,7 @@ export default function Portfolio() {
             />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <img
-                src="/images/portfolio/motor-city.jpg"
+                src="/newlayout/images/portfolio/motor-city.jpg"
                 alt="Case Study"
                 className="rounded-lg shadow-xl"
               />

@@ -5,7 +5,7 @@ export default function Logo() {
   return (
     <div className="flex items-center gap-2">
       <Image
-        src="/images/logo.png"
+        src="/newlayout/images/logo.png"
         alt="Hedefy Scaffolding Contracting Co. LLC"
         width={48}
         height={48}

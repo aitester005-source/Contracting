@@ -31,7 +31,7 @@ export default function About() {
           <div className="container-custom px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
               <img
-                src="/images/about-company.png"
+                src="/newlayout/images/about-company.png"
                 alt="Hedefy Scaffolding Company Overview"
                 className="rounded-lg shadow-xl"
               />

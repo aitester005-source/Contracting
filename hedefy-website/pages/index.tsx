@@ -43,19 +43,19 @@ export default function Home() {
       title: 'Motor City Community Building',
       location: 'Dubai, UAE',
       description: 'Large-scale residential complex scaffolding project',
-      image: '/images/portfolio/motor-city.jpg',
+      image: '/newlayout/images/portfolio/motor-city.jpg',
     },
     {
       title: 'Sustainable City 800 Villas',
       location: 'Abu Dhabi, Yas Island',
       description: 'Comprehensive villa construction scaffolding solution',
-      image: '/images/portfolio/sustainable-city.jpg',
+      image: '/newlayout/images/portfolio/sustainable-city.jpg',
     },
     {
       title: 'Sharjah Government Building',
       location: 'Sharjah, UAE',
       description: 'Dome scaffolding for government building',
-      image: '/images/portfolio/sharjah-government.jpg',
+      image: '/newlayout/images/portfolio/sharjah-government.jpg',
     },
   ];
 
@@ -111,7 +111,7 @@ export default function Home() {
               </div>
               <div className="hidden md:block">
                 <img
-                  src="/images/portfolio/motor-city.jpg"
+                  src="/newlayout/images/portfolio/motor-city.jpg"
                   alt="Professional Scaffolding"
                   className="rounded-lg shadow-2xl"
                 />
@@ -139,7 +139,7 @@ export default function Home() {
           <div className="container-custom px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <img
-                src="/images/portfolio/sharjah-government.jpg"
+                src="/newlayout/images/portfolio/sharjah-government.jpg"
                 alt="About Hedefy"
                 className="rounded-lg shadow-xl"
               />
