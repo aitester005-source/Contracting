@@ -13,8 +13,8 @@ export default function Header() {
       <div className="bg-accent text-primary-dark text-sm py-2 hidden md:block">
         <div className="container-custom flex justify-between px-4">
           <div className="flex gap-6">
-            <a href="tel:+971504529978" className="flex items-center gap-2 hover:text-primary-light">
-              <FaPhone size={14} /> +971 50-4529978
+            <a href="tel:0529885372" className="flex items-center gap-2 hover:text-primary-light">
+              <FaPhone size={14} /> 052-9885372
             </a>
             <a href="mailto:info@hedefy-scaff.com" className="hover:text-primary-light">
               info@hedefy-scaff.com
@@ -39,7 +39,9 @@ export default function Header() {
           <Link href="/services" className="hover:text-accent transition-colors">Services</Link>
           <Link href="/portfolio" className="hover:text-accent transition-colors">Portfolio</Link>
           <Link href="/contact" className="hover:text-accent transition-colors">Contact</Link>
-          <button className="btn-secondary text-sm">Get Quote</button>
+          <Link href="/contact">
+            <button className="btn-secondary text-sm">Get Quote</button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -60,7 +62,9 @@ export default function Header() {
             <Link href="/services" className="hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>Services</Link>
             <Link href="/portfolio" className="hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>Portfolio</Link>
             <Link href="/contact" className="hover:text-accent transition-colors" onClick={() => setIsOpen(false)}>Contact</Link>
-            <button className="btn-secondary w-full">Get Quote</button>
+            <Link href="/contact" onClick={() => setIsOpen(false)}>
+              <button className="btn-secondary w-full">Get Quote</button>
+            </Link>
           </div>
         </div>
       )}

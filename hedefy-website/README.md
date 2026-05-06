@@ -127,7 +127,7 @@ Fill in your configuration:
 NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
 NEXT_PUBLIC_OPENAI_API_KEY=your_openai_key
-WHATSAPP_NUMBER=+971504529978
+WHATSAPP_NUMBER=+971529885372
 ADMIN_EMAIL=admin@hedefy.ae
 ```
 
@@ -177,7 +177,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=
 NEXT_PUBLIC_OPENAI_API_KEY=
 
 # WhatsApp
-WHATSAPP_NUMBER=+971504529978
+WHATSAPP_NUMBER=+971529885372
 WHATSAPP_BUSINESS_ACCOUNT_ID=
 WHATSAPP_ACCESS_TOKEN=
 
@@ -281,7 +281,7 @@ Replace placeholder images in:
 
 For issues and questions:
 - Email: info@hedefy-scaff.com
-- Phone: +971 50-4529978
+- Phone: +971 52 988 5372
 - WhatsApp: Message us directly
 
 ## 📄 License

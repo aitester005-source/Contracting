@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import ServiceCard from '@/components/ServiceCard';
@@ -8,11 +9,13 @@ import {
   FaBuilding,
   FaCubes,
   FaHardHat,
-  FaSkyscraper,
+  FaCity,
   FaLandmark,
   FaWrench,
   FaCalendar,
   FaUsers,
+  FaBroadcastTower,
+  FaWarehouse,
 } from 'react-icons/fa';
 
 export default function Services() {
@@ -33,7 +36,7 @@ export default function Services() {
       description: 'Heavy-duty scaffolding solutions for water tanks, oil tanks, and industrial storage structures of all sizes.',
     },
     {
-      iconName: 'FaSkyscraper',
+      iconName: 'FaBroadcastTower',
       title: 'Scaffolding Tower Erection',
       description: 'Complete tower construction and erection services with expert engineering and supervision from start to finish.',
     },
@@ -219,9 +222,11 @@ export default function Services() {
               Contact us today for a free consultation and customized quote for your specific project needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
               <Button size="lg">Request Quote</Button>
+            </Link>
               <a
-                href="https://wa.me/971504529978?text=I need scaffolding services for my project"
+                href="https://wa.me/971529885372?text=I need scaffolding services for my project"
                 target="_blank"
                 rel="noopener noreferrer"
               >

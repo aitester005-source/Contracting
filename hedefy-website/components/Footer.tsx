@@ -47,9 +47,11 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4 text-accent">Contact Us</h4>
             <ul className="space-y-3 text-gray-300">
-              <li className="flex gap-2">
+              <li className="flex gap-2 items-start">
                 <FaPhone className="text-accent mt-1" size={16} />
-                <a href="tel:+971504529978" className="hover:text-accent">+971 50-4529978</a>
+                <div className="flex flex-col">
+                  <a href="tel:0529885372" className="hover:text-accent">052-9885372</a>
+                </div>
               </li>
               <li className="flex gap-2">
                 <FaEnvelope className="text-accent mt-1" size={16} />
@@ -59,9 +61,11 @@ export default function Footer() {
                 <FaMapMarkerAlt className="text-accent mt-1" size={16} />
                 <span>Dubai, UAE</span>
               </li>
-              <li className="flex gap-2">
+              <li className="flex gap-2 items-start">
                 <BiLogoWhatsapp className="text-accent mt-1" size={16} />
-                <a href="https://wa.me/971504529978" className="hover:text-accent">WhatsApp</a>
+                <div className="flex flex-col">
+                  <a href="https://wa.me/971529885372" className="hover:text-accent">WhatsApp (052-9885372)</a>
+                </div>
               </li>
             </ul>
           </div>

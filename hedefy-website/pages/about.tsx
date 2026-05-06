@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import SectionHeader from '@/components/SectionHeader';
 import Button from '@/components/Button';
+import Link from 'next/link';
 import { FaCheckCircle, FaBullseye, FaEye, FaAward, FaClock, FaUsers } from 'react-icons/fa';
 
 export default function About() {
@@ -30,8 +31,8 @@ export default function About() {
           <div className="container-custom px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-12">
               <img
-                src="https://via.placeholder.com/500x400?text=Company+Overview"
-                alt="Company Overview"
+                src="/images/about-company.png"
+                alt="Hedefy Scaffolding Company Overview"
                 className="rounded-lg shadow-xl"
               />
               <div>
@@ -192,7 +193,9 @@ export default function About() {
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
               Partner with Hedefy Scaffolding for your next project and experience the difference professional expertise makes.
             </p>
-            <Button size="lg">Get in Touch</Button>
+            <Link href="/contact">
+              <Button size="lg">Get in Touch</Button>
+            </Link>
           </div>
         </section>
       </Layout>

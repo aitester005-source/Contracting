@@ -7,8 +7,8 @@ export default function Logo() {
       <Image
         src="/images/logo.png"
         alt="Hedefy Scaffolding Contracting Co. LLC"
-        width={40}
-        height={40}
+        width={48}
+        height={48}
         priority
         className="object-contain"
       />

@@ -109,7 +109,7 @@ function generateResponse(message: string, history: Message[]): string {
     lowerMessage.includes('follow') ||
     lowerMessage.includes('quote')
   ) {
-    return 'You can reach us through:\n📞 Phone: +971 50-4529978\n📧 Email: info@hedefy-scaff.com\n💬 WhatsApp: Available 24/7\n\nOr fill out our contact form for a detailed quote. Our team responds within 2-4 hours.';
+    return 'You can reach us through:\n📞 Phone: 052-9885372\n📧 Email: info@hedefy-scaff.com\n💬 WhatsApp: Available 24/7\n\nOr fill out our contact form for a detailed quote. Our team responds within 2-4 hours.';
   }
 
   // Default response

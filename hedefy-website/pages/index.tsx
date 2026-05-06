@@ -99,7 +99,7 @@ export default function Home() {
                     </Button>
                   </Link>
                   <a
-                    href="https://wa.me/971504529978?text=Hello, I would like to request scaffolding services."
+                    href="https://wa.me/971529885372?text=Hello, I would like to request scaffolding services."
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -270,7 +270,7 @@ export default function Home() {
                 </Button>
               </Link>
               <a
-                href="https://wa.me/971XXXXXXXXX?text=Hello, I would like to request scaffolding services."
+                href="https://wa.me/971529885372?text=Hello, I would like to request scaffolding services."
                 target="_blank"
                 rel="noopener noreferrer"
               >

@@ -48,7 +48,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 NEXT_PUBLIC_OPENAI_API_KEY=sk-your-openai-api-key
 
 # WhatsApp Business
-WHATSAPP_NUMBER=971504529978
+WHATSAPP_NUMBER=971529885372
 WHATSAPP_BUSINESS_ACCOUNT_ID=your-business-account-id
 WHATSAPP_ACCESS_TOKEN=your-access-token
 
@@ -313,5 +313,5 @@ Next steps:
 ---
 
 **Support:** info@hedefy-scaff.com  
-**Emergency:** +971 50-4529978  
+**Emergency:** +971 52 988 5372  
 **WhatsApp:** Available 24/7

@@ -403,7 +403,7 @@ Your **Hedefy Scaffolding website** is now **fully built and ready to launch**!
 
 For questions or issues:
 - Email: info@hedefy-scaff.com
-- Phone: +971 50-4529978
+- Phone: +971 52 988 5372
 - WhatsApp: Available 24/7
 
 ---

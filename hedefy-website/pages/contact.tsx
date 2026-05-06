@@ -79,19 +79,22 @@ export default function Contact() {
                   <FaPhone />
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark mb-2">Phone</h3>
-                <a href="tel:+971504529978" className="text-gray-600 hover:text-primary-dark">
-                  +971 50-4529978
+                <a href="tel:0529885372" className="text-gray-600 hover:text-primary-dark block">
+                  052-9885372
                 </a>
               </div>
 
-              {/* Email */}
+              {/* Email & Website */}
               <div className="bg-white rounded-lg shadow-lg p-6 text-center border-t-4 border-accent">
                 <div className="text-4xl text-accent mb-4 flex justify-center">
                   <FaEnvelope />
                 </div>
-                <h3 className="text-xl font-bold text-primary-dark mb-2">Email</h3>
-                <a href="mailto:info@hedefy-scaff.com" className="text-gray-600 hover:text-primary-dark">
+                <h3 className="text-xl font-bold text-primary-dark mb-2">Contact</h3>
+                <a href="mailto:info@hedefy-scaff.com" className="text-gray-600 hover:text-primary-dark block mb-1">
                   info@hedefy-scaff.com
+                </a>
+                <a href="https://www.hedefy-scaff.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-dark block">
+                  www.hedefy-scaff.com
                 </a>
               </div>
 
@@ -102,12 +105,12 @@ export default function Contact() {
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark mb-2">WhatsApp</h3>
                 <a
-                  href="https://wa.me/971504529978"
+                  href="https://wa.me/971529885372"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-dark"
+                  className="text-gray-600 hover:text-primary-dark block"
                 >
-                  Chat on WhatsApp
+                  052-9885372
                 </a>
               </div>
 
@@ -152,7 +155,7 @@ export default function Contact() {
                   label="Phone Number"
                   name="phone"
                   type="tel"
-                  placeholder="+971 50-4529978"
+                  placeholder="052-9885372"
                   required
                   value={formData.phone}
                   onChange={handleChange}

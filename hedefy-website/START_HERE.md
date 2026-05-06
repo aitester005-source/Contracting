@@ -171,7 +171,7 @@ SMTP_PASSWORD=your_password
 
 ### Support
 - Email: info@hedefy-scaff.com
-- Phone: +971 50-4529978
+- Phone: +971 52 988 5372
 
 ---
 
@@ -356,7 +356,7 @@ Before launching, make sure you:
 ---
 
 **Questions?** Email: info@hedefy-scaff.com  
-**Emergency?** WhatsApp: +971 50-4529978  
+**Emergency?** WhatsApp: +971 52 988 5372  
 **Documentation?** See README.md
 
 ---

@@ -23,7 +23,9 @@ export default function ServiceCard({ iconName, title, description, index }: Ser
       </div>
       <h3 className="text-xl font-bold text-primary-dark mb-3">{title}</h3>
       <p className="text-gray-600 mb-6">{description}</p>
-      <button className="btn-secondary text-sm w-full">Request Quote</button>
+      <Link href="/contact">
+        <button className="btn-secondary text-sm w-full">Request Quote</button>
+      </Link>
     </div>
   );
 }
