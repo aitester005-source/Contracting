@@ -95,7 +95,7 @@ export function getConfirmationTemplate(data: { name: string }): string {
           <ul style="color: #333; line-height: 1.8;">
             <li>Chat with our AI assistant for quick answers</li>
             <li>Message us on WhatsApp for urgent matters</li>
-            <li>Call us at <a href="tel:0529885372" style="color: #0052cc; text-decoration: none;">052-9885372</a></li>
+            <li>Call us at <a href="tel:0504529978" style="color: #0052cc; text-decoration: none;">050-4529978</a></li>
           </ul>
         </div>
         

@@ -79,8 +79,8 @@ export default function Contact() {
                   <FaPhone />
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark mb-2">Phone</h3>
-                <a href="tel:0529885372" className="text-gray-600 hover:text-primary-dark block">
-                  052-9885372
+                <a href="tel:0504529978" className="text-gray-600 hover:text-primary-dark block">
+                  050-4529978
                 </a>
               </div>
 
@@ -105,12 +105,12 @@ export default function Contact() {
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark mb-2">WhatsApp</h3>
                 <a
-                  href="https://wa.me/971529885372"
+                  href="https://wa.me/971504529978"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-primary-dark block"
                 >
-                  052-9885372
+                  050-4529978
                 </a>
               </div>
 
@@ -155,7 +155,7 @@ export default function Contact() {
                   label="Phone Number"
                   name="phone"
                   type="tel"
-                  placeholder="052-9885372"
+                  placeholder="050-4529978"
                   required
                   value={formData.phone}
                   onChange={handleChange}
@@ -230,41 +230,6 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* FAQ Section */}
-        <section className="section-padding bg-gray-50">
-          <div className="container-custom px-4">
-            <SectionHeader
-              title="Frequently Asked Questions"
-              subtitle="Quick answers to common questions"
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-primary-dark mb-3">How do I get a quote?</h3>
-                <p className="text-gray-600">
-                  Fill out our contact form above, call us, or message on WhatsApp. Our team will provide a detailed quote within 24 hours.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-primary-dark mb-3">What is your response time?</h3>
-                <p className="text-gray-600">
-                  We typically respond to all inquiries within 2-4 hours during business hours. For urgent matters, call us directly.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-primary-dark mb-3">Do you provide 24/7 support?</h3>
-                <p className="text-gray-600">
-                  Yes, we have emergency support available 24/7 for urgent project issues and support needs.
-                </p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-lg">
-                <h3 className="text-xl font-bold text-primary-dark mb-3">What payment terms do you offer?</h3>
-                <p className="text-gray-600">
-                  We offer flexible payment terms based on project requirements. Payment options include cash, transfers, and installments.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
       </Layout>
     </>
   );

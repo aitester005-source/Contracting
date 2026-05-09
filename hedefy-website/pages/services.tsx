@@ -84,10 +84,18 @@ export default function Services() {
         {/* Services Grid */}
         <section className="section-padding bg-gray-50">
           <div className="container-custom px-4">
-            <SectionHeader
-              title="Complete Scaffolding Solutions"
-              subtitle="Explore our wide range of professional scaffolding services"
-            />
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Complete Scaffolding Solutions</h2>
+              <p className="text-xl text-gray-600 mb-8">Explore our wide range of professional scaffolding services</p>
+              
+              {/* Long Modern Separator Bar */}
+              <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
+                <div className="h-full w-1/4 bg-accent animate-pulse"></div>
+                <div className="h-full w-2/4 bg-primary-dark"></div>
+                <div className="h-full w-1/4 bg-accent animate-pulse"></div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, idx) => (
                 <ServiceCard key={idx} {...service} index={idx} />
@@ -96,50 +104,39 @@ export default function Services() {
           </div>
         </section>
 
-        {/* Service Details */}
+        {/* Service Details / Our Approach */}
         <section className="section-padding bg-white">
           <div className="container-custom px-4">
-            <SectionHeader
-              title="Our Approach"
-              subtitle="How we deliver exceptional scaffolding services"
-            />
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Our Approach</h2>
+              <p className="text-xl text-gray-600 mb-8">How we deliver exceptional scaffolding services</p>
+              
+              {/* Long Modern Separator Bar */}
+              <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
+                <div className="h-full w-1/2 bg-accent animate-pulse"></div>
+                <div className="h-full w-1/2 bg-primary-dark"></div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">1. Assessment</h3>
-                <p className="text-gray-600">
-                  We conduct thorough site assessments to understand project requirements, environmental conditions, and technical specifications.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">2. Planning</h3>
-                <p className="text-gray-600">
-                  Our engineering team develops detailed plans and designs optimized for safety, efficiency, and cost-effectiveness.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">3. Installation</h3>
-                <p className="text-gray-600">
-                  Professional installation by trained crews following strict safety protocols and industry standards.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">4. Inspection</h3>
-                <p className="text-gray-600">
-                  Regular inspections and maintenance throughout the project duration to ensure safety and stability.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">5. Dismantling</h3>
-                <p className="text-gray-600">
-                  Safe and efficient removal of scaffolding structures upon project completion with proper disposal.
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-8 border-l-4 border-accent">
-                <h3 className="text-2xl font-bold text-primary-dark mb-4">6. Follow-up</h3>
-                <p className="text-gray-600">
-                  Post-project support and documentation for future reference and compliance verification.
-                </p>
-              </div>
+              {[
+                { step: '01', title: 'Assessment', desc: 'We conduct thorough site assessments to understand project requirements and technical specifications.' },
+                { step: '02', title: 'Planning', desc: 'Our engineering team develops detailed plans optimized for safety, efficiency, and cost-effectiveness.' },
+                { step: '03', title: 'Installation', desc: 'Professional installation by trained crews following strict safety protocols and industry standards.' },
+                { step: '04', title: 'Inspection', desc: 'Regular inspections throughout the project duration to ensure absolute safety and structural stability.' },
+                { step: '05', title: 'Dismantling', desc: 'Safe and efficient removal of scaffolding structures upon project completion with precision.' },
+                { step: '06', title: 'Follow-up', desc: 'Post-project support and documentation for future reference and compliance verification.' }
+              ].map((item, idx) => (
+                <div key={idx} className="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-gray-50 relative overflow-hidden flex flex-col h-full">
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                  
+                  <div className="text-5xl font-black text-accent/10 group-hover:text-accent/20 mb-6 transition-colors font-mono">
+                    {item.step}
+                  </div>
+                  <h3 className="text-2xl font-bold text-primary-dark mb-4">{item.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -226,7 +223,7 @@ export default function Services() {
               <Button size="lg">Request Quote</Button>
             </Link>
               <a
-                href="https://wa.me/971529885372?text=I need scaffolding services for my project"
+                href="https://wa.me/971504529978?text=I need scaffolding services for my project"
                 target="_blank"
                 rel="noopener noreferrer"
               >
