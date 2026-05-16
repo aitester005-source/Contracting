@@ -7,8 +7,13 @@ import Button from '@/components/Button';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { BiLogoWhatsapp } from 'react-icons/bi';
 import toast from 'react-hot-toast';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
+import WhatsAppLeadModal from '@/components/WhatsAppLeadModal';
 
 export default function Contact() {
+  const router = useRouter();
+  const { project, service } = router.query;
   const [formData, setFormData] = useState({
     name: '',
     company: '',
@@ -17,6 +22,16 @@ export default function Contact() {
     projectDetails: '',
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+
+  useEffect(() => {
+    if (project || service) {
+      setFormData((prev) => ({
+        ...prev,
+        projectDetails: `Inquiry regarding ${service ? `Service: ${service}` : 'your scaffolding services'}${project ? ` (specifically project reference: ${project})` : ''}. I would like to request a quote.`,
+      }));
+    }
+  }, [project, service]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -104,14 +119,12 @@ export default function Contact() {
                   <BiLogoWhatsapp />
                 </div>
                 <h3 className="text-xl font-bold text-primary-dark mb-2">WhatsApp</h3>
-                <a
-                  href="https://wa.me/971504529978"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-dark block"
+                <button
+                  onClick={() => setIsWhatsAppModalOpen(true)}
+                  className="text-gray-600 hover:text-primary-dark block mx-auto"
                 >
                   050-4529978
-                </a>
+                </button>
               </div>
 
               {/* Location */}
@@ -230,6 +243,12 @@ export default function Contact() {
           </div>
         </section>
 
+        <WhatsAppLeadModal
+          isOpen={isWhatsAppModalOpen}
+          onClose={() => setIsWhatsAppModalOpen(false)}
+          remarks={`Contact Page Request ${formData.name ? `from ${formData.name}` : ''}`}
+          whatsappUrl="https://wa.me/971504529978"
+        />
       </Layout>
     </>
   );

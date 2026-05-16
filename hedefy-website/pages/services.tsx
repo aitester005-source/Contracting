@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '@/components/Layout';
-import SectionHeader from '@/components/SectionHeader';
 import ServiceCard from '@/components/ServiceCard';
 import Button from '@/components/Button';
 import {
@@ -17,50 +16,20 @@ import {
   FaBroadcastTower,
   FaWarehouse,
 } from 'react-icons/fa';
+import ServiceProjectsModal from '@/components/ServiceProjectsModal';
+import { useState } from 'react';
+import { servicesData } from '@/data/servicesData';
 
 export default function Services() {
-  const services = [
-    {
-      iconName: 'FaBuilding',
-      title: 'External Scaffolding for Buildings',
-      description: 'Professional external scaffolding solutions for residential and commercial building construction, ensuring safe worker access and structural integrity.',
-    },
-    {
-      iconName: 'FaLandmark',
-      title: 'Masjid Minaret Scaffolding',
-      description: 'Specialized and precision scaffolding for mosque minarets with utmost safety standards and technical expertise.',
-    },
-    {
-      iconName: 'FaCubes',
-      title: 'Tank External Scaffolding',
-      description: 'Heavy-duty scaffolding solutions for water tanks, oil tanks, and industrial storage structures of all sizes.',
-    },
-    {
-      iconName: 'FaBroadcastTower',
-      title: 'Scaffolding Tower Erection',
-      description: 'Complete tower construction and erection services with expert engineering and supervision from start to finish.',
-    },
-    {
-      iconName: 'FaHardHat',
-      title: 'Slab Support Scaffolding',
-      description: 'Temporary structural support systems for concrete slabs and elevated work areas during construction.',
-    },
-    {
-      iconName: 'FaWarehouse',
-      title: 'Chandelier Scaffolding',
-      description: 'Specialized scaffolding for large fixture installations, maintenance, and construction of decorated structures.',
-    },
-    {
-      iconName: 'FaWrench',
-      title: 'Signboard Scaffolding',
-      description: 'Safe and secure scaffolding systems for installing, maintaining, and removing large signboards and advertisements.',
-    },
-    {
-      iconName: 'FaCalendar',
-      title: 'Event & Exhibition Scaffolding',
-      description: 'Temporary scaffolding and structural solutions for events, exhibitions, concerts, and temporary installations.',
-    },
-  ];
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const services = servicesData;
+
+  const handleServiceClick = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
 
   return (
     <>
@@ -87,7 +56,7 @@ export default function Services() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Complete Scaffolding Solutions</h2>
               <p className="text-xl text-gray-600 mb-8">Explore our wide range of professional scaffolding services</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/4 bg-accent animate-pulse"></div>
@@ -98,7 +67,12 @@ export default function Services() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, idx) => (
-                <ServiceCard key={idx} {...service} index={idx} />
+                <ServiceCard
+                  key={idx}
+                  {...service}
+                  index={idx}
+                  onClick={() => handleServiceClick(service)}
+                />
               ))}
             </div>
           </div>
@@ -110,7 +84,7 @@ export default function Services() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Our Approach</h2>
               <p className="text-xl text-gray-600 mb-8">How we deliver exceptional scaffolding services</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/2 bg-accent animate-pulse"></div>
@@ -129,7 +103,7 @@ export default function Services() {
               ].map((item, idx) => (
                 <div key={idx} className="group bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 border border-gray-50 relative overflow-hidden flex flex-col h-full">
                   <div className="absolute top-0 left-0 w-full h-1.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                  
+
                   <div className="text-5xl font-black text-accent/10 group-hover:text-accent/20 mb-6 transition-colors font-mono">
                     {item.step}
                   </div>
@@ -142,98 +116,117 @@ export default function Services() {
         </section>
 
         {/* Safety & Certification */}
-        <section className="section-padding bg-primary-dark text-white">
-          <div className="container-custom px-4">
-            <SectionHeader
-              title="Safety & Certification"
-              subtitle="We meet the highest industry standards"
-            />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-bold text-accent mb-6">Our Certifications</h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>ISO 9001:2015 Quality Management</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>OHSAS 18001 Safety Management</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>UAE Labor Law Compliance</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>International Safety Standards</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Professional Insurance Coverage</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Equipment Inspection & Maintenance</span>
-                  </li>
-                </ul>
+        <section className="section-padding bg-primary-dark relative overflow-hidden">
+          {/* Background Decorative elements */}
+          <div className="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px]"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-accent/5 rounded-full blur-[120px]"></div>
+
+          <div className="container-custom px-4 relative z-10">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">Safety & Certification</h2>
+              <p className="text-xl text-gray-400 max-w-2xl mx-auto">We operate at the highest international industry standards to ensure zero-risk environments.</p>
+
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {/* Certifications Card */}
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] p-10 lg:p-12">
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-primary-dark text-3xl">
+                    <FaLandmark />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white">Our Certifications</h3>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {[
+                    "ISO 9001:2015",
+                    "OHSAS 18001",
+                    "UAE Labor Law",
+                    "Intl Safety Standards",
+                    "Professional Insurance",
+                    "Equipment Inspection"
+                  ].map((cert, i) => (
+                    <div key={i} className="flex items-center gap-3 group">
+                      <div className="w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-primary-dark transition-all duration-300">
+                        <FaBuilding size={14} />
+                      </div>
+                      <span className="text-gray-300 font-medium group-hover:text-white transition-colors">{cert}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-accent mb-6">Safety Measures</h3>
-                <ul className="space-y-4">
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Regular staff safety training programs</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Daily safety inspections and checks</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Personal protective equipment (PPE) provided</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Emergency response procedures</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Environmental safety compliance</span>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="text-accent text-bold">✓</span>
-                    <span>Incident reporting and investigation</span>
-                  </li>
-                </ul>
+
+              {/* Safety Measures Card */}
+              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-[3rem] p-10 lg:p-12">
+                <div className="flex items-center gap-4 mb-10">
+                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center text-accent text-3xl">
+                    <FaHardHat />
+                  </div>
+                  <h3 className="text-3xl font-bold text-white">Safety Measures</h3>
+                </div>
+
+                <div className="space-y-6">
+                  {[
+                    "Regular staff safety training programs",
+                    "Daily safety inspections and checks",
+                    "PPE provided to all personnel",
+                    "Environmental safety compliance"
+                  ].map((measure, i) => (
+                    <div key={i} className="flex items-start gap-4 group">
+                      <div className="mt-1 w-6 h-6 rounded-md bg-accent flex items-center justify-center text-primary-dark shrink-0">
+                        <FaWrench size={12} />
+                      </div>
+                      <p className="text-gray-300 group-hover:text-white transition-colors leading-tight">{measure}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-white">
+        <section className="section-padding bg-white relative">
           <div className="container-custom px-4 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Need Scaffolding Services?</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Contact us today for a free consultation and customized quote for your specific project needs.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
-              <Button size="lg">Request Quote</Button>
-            </Link>
-              <a
-                href="https://wa.me/971504529978?text=I need scaffolding services for my project"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button size="lg" variant="outline">
-                  WhatsApp Us
-                </Button>
-              </a>
+            <div className="max-w-5xl mx-auto bg-gray-50 rounded-[4rem] p-12 lg:p-20 border border-gray-100 shadow-sm relative overflow-hidden group">
+              {/* Subtle background decoration */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full -mr-32 -mt-32 transition-transform duration-1000 group-hover:scale-150"></div>
+
+              <div className="relative z-10">
+                <h2 className="text-4xl md:text-6xl font-bold text-primary-dark mb-6">Ready to Build Safely?</h2>
+                <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto leading-relaxed">
+                  Partner with the UAE's trusted scaffolding contractor. Contact us today for a free consultation and customized quote.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                  <Link href="/contact" className="w-full sm:w-auto">
+                    <Button size="lg" className="w-full">Request Detailed Quote</Button>
+                  </Link>
+                  <a
+                    href="https://wa.me/971504529978?text=I need scaffolding services for my project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="lg" variant="outline" className="w-full border-gray-200">
+                      Chat on WhatsApp
+                    </Button>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        {/* Modal */}
+        {selectedService && (
+          <ServiceProjectsModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            serviceTitle={selectedService.title}
+            projects={selectedService.projects}
+          />
+        )}
       </Layout>
     </>
   );

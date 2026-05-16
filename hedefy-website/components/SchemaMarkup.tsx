@@ -5,7 +5,7 @@ const SchemaMarkup: React.FC = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Hedefy Scaffolding Contracting Co. LLC",
-    "image": "https://hedefy-scaff.com/newlayout/images/logo.jpeg",
+    "image": "https://hedefy-scaff.com/images/logo.jpeg",
     "@id": "https://hedefy-scaff.com/",
     "url": "https://hedefy-scaff.com/",
     "telephone": "+971 50 4529978",
@@ -47,7 +47,7 @@ const SchemaMarkup: React.FC = () => {
     "name": "Hedefy Scaffolding Contracting Co. LLC",
     "alternateName": "Hedefy Scaffolding",
     "url": "https://hedefy-scaff.com/",
-    "logo": "https://hedefy-scaff.com/newlayout/images/logo.jpeg",
+    "logo": "https://hedefy-scaff.com/images/logo.jpeg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+971 50 4529978",

@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '@/components/Layout';
-import SectionHeader from '@/components/SectionHeader';
 import Button from '@/components/Button';
 import Link from 'next/link';
 import { FaCheckCircle, FaBullseye, FaEye, FaAward, FaClock, FaUsers } from 'react-icons/fa';
@@ -37,7 +36,7 @@ export default function About() {
                 <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-dark/10 rounded-2xl -z-10 group-hover:-rotate-12 transition-transform duration-500"></div>
                 
                 <img
-                  src="/newlayout/images/portfolio/motor-city.jpg"
+                  src="/images/portfolio/motor-city.jpg"
                   alt="Hedefy Scaffolding Company Overview"
                   className="rounded-[2rem] shadow-2xl relative z-10 w-full object-cover aspect-[4/3] group-hover:scale-[1.02] transition-transform duration-500"
                 />

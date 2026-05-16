@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from '../components/Layout';
-import SectionHeader from '../components/SectionHeader';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
 import Button from '../components/Button';
@@ -15,49 +14,59 @@ import {
   FaChartLine,
 } from 'react-icons/fa';
 import { BiLogoWhatsapp } from 'react-icons/bi';
+import { servicesData } from '@/data/servicesData';
+import ServiceProjectsModal from '@/components/ServiceProjectsModal';
+import WhatsAppLeadModal from '@/components/WhatsAppLeadModal';
+import { useState } from 'react';
 
 export default function Home() {
-  const services = [
-    {
-      iconName: 'FaBuilding',
-      title: 'External Building Scaffolding',
-      description: 'Professional external scaffolding solutions for residential and commercial buildings.',
-    },
-    {
-      iconName: 'FaMosque',
-      title: 'Minaret Scaffolding',
-      description: 'Specialized scaffolding for mosque minarets with precision and safety.',
-    },
-    {
-      iconName: 'FaBox',
-      title: 'Tank Scaffolding',
-      description: 'Heavy-duty scaffolding for water tanks and industrial storage structures.',
-    },
-    {
-      iconName: 'FaMonument',
-      title: 'Tower Erection',
-      description: 'Complete tower construction and erection services with expert supervision.',
-    },
-  ];
+  const [selectedService, setSelectedService] = useState<any>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isWhatsAppModalOpen, setIsWhatsAppModalOpen] = useState(false);
+
+  const handleServiceClick = (service: any) => {
+    setSelectedService(service);
+    setIsModalOpen(true);
+  };
+
+  const services = servicesData.slice(0, 4); // Show first 4 on home page
 
   const projects = [
     {
-      title: 'Motor City Community Building',
+      title: 'Villa External Scaffolding',
       location: 'Dubai, UAE',
-      description: 'Large-scale residential complex scaffolding project',
-      image: '/newlayout/images/portfolio/motor-city.jpg',
+      description: 'Customized external scaffolding for residential villa construction.',
+      image: '/images/portfolio/Villa External Scaffolding P1.jpeg',
     },
     {
-      title: 'Sustainable City 800 Villas',
-      location: 'Abu Dhabi, Yas Island',
-      description: 'Comprehensive villa construction scaffolding solution',
-      image: '/newlayout/images/portfolio/sustainable-city.jpg',
+      title: 'Building Access Scaffolding',
+      location: 'Abu Dhabi, UAE',
+      description: 'Professional high-rise building access scaffolding solution.',
+      image: '/images/portfolio/Building Access Scaffolding P1.jpeg',
     },
     {
-      title: 'Sharjah Government Building',
+      title: 'Tower Access Scaffolding',
       location: 'Sharjah, UAE',
-      description: 'Dome scaffolding for government building',
-      image: '/newlayout/images/portfolio/sharjah-government.jpg',
+      description: 'Specialized tower access scaffolding for tall structures.',
+      image: '/images/portfolio/Tower Access Scaffolding P1.jpeg',
+    },
+    {
+      title: 'Dome External Scaffolding',
+      location: 'Dubai, UAE',
+      description: 'Complex dome scaffolding for masjid and government landmarks.',
+      image: '/images/portfolio/Dome External Scaffolding P1.jpeg',
+    },
+    {
+      title: 'Dome Internal Scaffolding',
+      location: 'Sharjah, UAE',
+      description: 'Safe and secure internal scaffolding for dome decoration.',
+      image: '/images/portfolio/Dome Internal Scaffolding P1.jpeg',
+    },
+    {
+      title: 'Maintenance Tower Works',
+      location: 'Dubai, UAE',
+      description: 'Mobile and static scaffolding towers for maintenance.',
+      image: '/images/portfolio/Scaffolding Tower for maintenance works P1.jpeg',
     },
   ];
 
@@ -81,20 +90,20 @@ export default function Home() {
           content="Scaffolding Company Dubai, Scaffolding Contractor UAE, Scaffolding Services Dubai, Industrial Scaffolding UAE, Construction Scaffolding Dubai, Event Scaffolding Dubai, Aluminum Scaffolding UAE, Scaffolding Rental Dubai, Scaffolding Installation UAE, Safe Scaffolding Solutions Dubai"
         />
         <link rel="canonical" href="https://hedefy-scaff.com/" />
-        
+
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://hedefy-scaff.com/" />
         <meta property="og:title" content="Hedefy Scaffolding - Professional Scaffolding Solutions in UAE" />
         <meta property="og:description" content="Leading scaffolding company in Dubai providing safe and certified solutions for construction and industrial projects across the UAE." />
-        <meta property="og:image" content="https://hedefy-scaff.com/newlayout/images/portfolio/motor-city.jpg" />
+        <meta property="og:image" content="https://hedefy-scaff.com/images/portfolio/motor-city.jpg" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://hedefy-scaff.com/" />
         <meta property="twitter:title" content="Hedefy Scaffolding - Professional Scaffolding Solutions in UAE" />
         <meta property="twitter:description" content="Safe, reliable, and high-quality scaffolding services in Dubai and UAE since 2010." />
-        <meta property="twitter:image" content="https://hedefy-scaff.com/newlayout/images/portfolio/motor-city.jpg" />
+        <meta property="twitter:image" content="https://hedefy-scaff.com/images/portfolio/motor-city.jpg" />
       </Head>
 
       <Layout>
@@ -119,13 +128,13 @@ export default function Home() {
           <div className="container-custom px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <img
-                src="/newlayout/images/portfolio/sharjah-government.jpg"
+                src="/images/portfolio/Building Access Scaffolding P2.jpeg"
                 alt="About Hedefy"
                 className="rounded-lg shadow-xl"
               />
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">About Hedefy</h2>
-                
+
                 {/* Long Modern Separator Bar */}
                 <div className="w-full max-w-xs h-1.5 bg-gray-100 rounded-full mb-8 overflow-hidden flex">
                   <div className="h-full w-1/2 bg-accent"></div>
@@ -165,7 +174,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Our Services</h2>
               <p className="text-xl text-gray-600 mb-8">Comprehensive scaffolding solutions for all your project needs</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/4 bg-accent animate-pulse"></div>
@@ -175,7 +184,12 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {services.map((service, idx) => (
-                <ServiceCard key={idx} {...service} index={idx} />
+                <ServiceCard
+                  key={idx}
+                  {...service}
+                  index={idx}
+                  onClick={() => handleServiceClick(service)}
+                />
               ))}
             </div>
             <div className="text-center mt-12">
@@ -192,7 +206,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Why Choose Hedefy</h2>
               <p className="text-xl text-gray-600 mb-8">Experience, expertise, and commitment to excellence</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/4 bg-accent animate-pulse"></div>
@@ -211,7 +225,7 @@ export default function Home() {
                 <div key={idx} className="bg-white p-10 rounded-[2.5rem] shadow-sm hover:shadow-2xl hover:-translate-y-3 transition-all duration-500 flex flex-col h-full text-center border border-gray-50 group relative overflow-hidden">
                   {/* Subtle top accent */}
                   <div className="absolute top-0 left-0 w-full h-1.5 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
-                  
+
                   <div className="w-20 h-20 bg-accent/10 rounded-full flex justify-center items-center text-4xl text-accent mx-auto mb-8 group-hover:bg-accent group-hover:text-primary-dark transition-all duration-500">
                     {item.icon}
                   </div>
@@ -229,7 +243,7 @@ export default function Home() {
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">Featured Projects</h2>
               <p className="text-xl text-gray-600 mb-8">Showcasing our successful completed projects across UAE</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/4 bg-accent animate-pulse"></div>
@@ -256,7 +270,7 @@ export default function Home() {
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-primary-dark mb-4">UAE Coverage Areas</h2>
               <p className="text-xl text-gray-600 mb-8">Serving construction and industrial projects across all major Emirates</p>
-              
+
               {/* Long Modern Separator Bar */}
               <div className="w-full max-w-4xl mx-auto h-1.5 bg-gray-200 rounded-full overflow-hidden flex">
                 <div className="h-full w-1/3 bg-accent animate-pulse"></div>
@@ -277,14 +291,14 @@ export default function Home() {
                   {/* Hover Background Accent */}
                   <div className="absolute top-0 left-0 w-full h-2 bg-accent transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
                   <div className="absolute inset-0 bg-primary-dark opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
-                  
+
                   <h3 className="text-2xl font-bold text-primary-dark group-hover:text-accent mb-4 transition-colors">
                     {area.city}
                   </h3>
                   <p className="text-gray-600 group-hover:text-gray-200 text-sm leading-relaxed transition-colors">
                     {area.desc}
                   </p>
-                  
+
                   {/* Subtle Icon or Shape */}
                   <div className="mt-auto pt-6 text-accent opacity-20 group-hover:opacity-100 transition-opacity">
                     <FaCheckCircle className="text-3xl" />
@@ -299,13 +313,13 @@ export default function Home() {
         <section className="section-padding bg-primary-dark text-white relative overflow-hidden">
           {/* Decorative background accent */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent via-primary-dark to-accent opacity-30"></div>
-          
+
           <div className="container-custom px-4 text-center relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready to Get Started?</h2>
             <p className="text-xl text-gray-200 mb-12 max-w-2xl mx-auto leading-relaxed">
               Contact us today for a free consultation and quote for your scaffolding project. Our expert team is ready to assist you.
             </p>
-            
+
             <div className="max-w-2xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-[3rem] p-4 shadow-2xl flex flex-col md:flex-row items-center justify-center gap-4">
               {/* Request Quote Button */}
               <Link href="/contact" className="w-full md:flex-1">
@@ -314,22 +328,35 @@ export default function Home() {
                   <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </button>
               </Link>
-              
+
               {/* WhatsApp Button */}
-              <a
-                href="https://wa.me/971504529978?text=Hello, I would like to request scaffolding services."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full md:flex-1"
+              <button
+                onClick={() => setIsWhatsAppModalOpen(true)}
+                className="w-full md:flex-1 bg-[#25D366] text-white font-bold py-5 px-8 rounded-full hover:bg-white hover:text-[#25D366] transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg"
               >
-                <button className="w-full bg-[#25D366] text-white font-bold py-5 px-8 rounded-full hover:bg-white hover:text-[#25D366] transition-all duration-300 shadow-lg flex items-center justify-center gap-3 text-lg">
-                  <BiLogoWhatsapp size={24} />
-                  Chat on WhatsApp
-                </button>
-              </a>
+                <BiLogoWhatsapp size={24} />
+                Chat on WhatsApp
+              </button>
             </div>
           </div>
         </section>
+
+        {/* Modal */}
+        {selectedService && (
+          <ServiceProjectsModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            serviceTitle={selectedService.title}
+            projects={selectedService.projects}
+          />
+        )}
+
+        <WhatsAppLeadModal
+          isOpen={isWhatsAppModalOpen}
+          onClose={() => setIsWhatsAppModalOpen(false)}
+          remarks="Homepage Main CTA WhatsApp"
+          whatsappUrl="https://wa.me/971504529978?text=Hello, I would like to request scaffolding services."
+        />
       </Layout>
     </>
   );

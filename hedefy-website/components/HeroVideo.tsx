@@ -14,13 +14,13 @@ const HeroVideo: React.FC = () => {
           loop
           playsInline
           className={styles.backgroundVideo}
-          poster="/newlayout/images/portfolio/motor-city.jpg"
+          poster="/images/portfolio/motor-city.jpg"
         >
           {/* 
               DRONE CONSTRUCTION VIDEO:
               A high-quality drone video from Pexels is used as a default.
               You can replace the src below with your local file path:
-              /newlayout/videos/hero-construction.mp4
+              /videos/hero-construction.mp4
           */}
           <source src="https://videos.pexels.com/video-files/5849646/5849646-uhd_2560_1440_24fps.mp4" type="video/mp4" />
           
